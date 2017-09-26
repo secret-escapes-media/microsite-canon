@@ -1,0 +1,34 @@
+
+
+<section class="banner{% if page.id == 'overview' %} banner--nav-bottom{% else %} banner--nav-top{% endif %}">
+
+
+  <div class="banner__content">
+    <div class="banner__content-wrap row row--padding">
+
+      {% if page.banner.content %}
+        {{page.banner.content}}
+      {% else %}
+
+        {% if page.banner.title-super %}<div class="title title--sm title--super title--kerning title--upper">{{page.banner.title-super}}</div>{% endif %}
+
+        <h1 class="title title--xxxxl title--upper title--display">{% if page.banner.title %}{{page.banner.title}}{% else %}{{page.title}}{% endif %}</h1>
+
+        {% if page.banner.title-sub %}<div class="title title--sm">{{page.banner.title-sub}}</div>{% endif %}
+
+      {% endif %}
+
+    </div>
+  </div>
+
+
+  <div class="banner__overlay"></div>
+
+
+  <div class="banner__bg" style="background-image: url('{{site.baseurl}}/img/bg/banner/{{page.id}}.jpg');" data-location="{{page.banner.location}}"></div>
+
+
+  {% include banner/components/nav.html %}
+
+
+</section>

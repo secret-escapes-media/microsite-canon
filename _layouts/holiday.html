@@ -1,0 +1,44 @@
+---
+layout: default
+---
+<div class="page__content">
+
+
+
+  {% include page/intro.html %}
+
+
+
+  <section class="bg--light-grey">
+    {% for section in page.sections %}
+
+      <div class="harvey" id="section-{{section.title | slugify}}">
+
+        <div class="harvey__image bg-img{% if section.image-grid %} bg-img--1-1{% else %} bg-img--4-3{% endif %}" style="background-image:url({{site.baseurl}}/img/content/{{page.id}}/{{section.title | slugify}}.jpg);"></div>
+
+        <div class="harvey__text">
+          <h3 class="title title--md">{{section.title}}</h3>
+          <hr class="hr--center">
+          <p class="text--lg">{{section.content | truncate: 220 | strip_html}}</p>
+        </div>
+
+      </div>
+
+    {% endfor %}
+  </section>
+
+
+
+  <section id="section-academy" class="vpad--xl bg--theme-primary text--white text--center">
+    <div class="row row--padding">
+      <h2 class="title title--lg title--upper title--display">The Canon Academy</h2>
+      <p class="text--lg">Nulla vitae elit libero, a pharetra augue. Nulla vitae elit libero, a pharetra augue.</p>
+      <a href="#" class="btn btn--white">Find out more</a>
+    </div>
+  </section>
+
+
+
+</div><!-- END .page__content -->
+
+

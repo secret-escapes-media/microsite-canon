@@ -1,0 +1,52 @@
+---
+layout: default
+id: overview
+title: Overview
+nav-order: 1
+
+banner:
+  title: Live for the Story
+  title-sub: Nehmen Sie Ihr Urlaubsgefühl/erlebnis mit nach Hause
+
+intro: >
+  <p class="text--lg">  Canon und Secret Escapes kooperieren miteinander und ermöglichen Ihnen, Ihre Urlaubsgeschichten perfekt festzuhalten.</p>
+  <p>Im Urlaub erleben wir einzigartige Momente. Um dem Alltag zu entfliehen, denken wir gerne daran zurück und schauen oft auf unsere Urlaubsbilder. Denn Bilder erzählen Geschichten. Canon hilft Ihnen dabei Ihre einzigartigen Geschichten in ausdrucksstarken und gefühlsvollen Bildern festzuhalten. Damit Sie die Wärme des Sonnenuntergangs, den Ruf der Papageien oder den Geruch des exotischen Abendessens auch noch zu Hause nachempfinden. Denn die nächste Geschichte wartet schon auf Sie…</p>
+  <p>Was Sie erwartet: Kurze Fotografietutorials der Canon Academy zu City-Trip-, Aktivurlaub- und Natururlaub-Situationen, situationsbedingte Produktempfehlungen, Reisefotografie-Leitfaden der Canon Academy zum Download, 50GB Irista Gutschein</p>
+
+---
+<div class="page__content">
+
+
+
+  <div class="section bg--light-grey text--center">
+    <div class="row row--padding">
+      {{page.intro}}
+    </div>
+  </div>
+
+
+
+  <div class="section bg--white">
+  {% assign pages = site.html_pages | sort:"nav-order" %}
+  {% for page in pages %}
+    {% unless page.id == "overview" %}
+
+    <div class="row row--padding bob">
+
+      <<a href="{{site.baseurl}}{{page.url}}" class="bob__image bg-img bg-img--4-3 bg-img--rounded" style="background-image: url({{site.baseurl}}/img/bg/banner/{{page.id}}.jpg);"></a>
+
+      <div class="bob__text">
+        <h3 class="title title--md">{{page.title}}</h3>
+        <p class="text--lg">{{page.intro | strip_html | truncate: 220}}</p>
+        <a href="{{site.baseurl}}{{page.url}}" class="btn btn--primary">Read more</a>
+      </div>
+
+    </div>
+
+    {% endunless %}
+  {% endfor %}
+  </div>
+
+
+
+</div>

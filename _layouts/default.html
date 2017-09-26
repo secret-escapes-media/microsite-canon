@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  {% include page/head.html %}
+
+  <body id="top" class="page--{{page.id}}" data-current-page="{% if page.group %}{{page.group}}{% else %}{{page.id}}{% endif %}">
+
+
+    {% include page/tracking.html %}
+
+
+    <div class="site__content">
+
+      {% include page/header.html %}
+
+      {% include banner/default.html %}
+
+      {{ content }}
+
+      {% include components/storypack.html %}
+
+      {% include page/footer.html %}
+
+    </div><!-- END .site__content -->
+
+
+
+  </body>
+
+</html>

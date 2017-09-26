@@ -1,0 +1,105 @@
+// general styles for the project that wouldn't be a reuseable component
+
+.bg {
+  &--white      { background-color: $white; }
+  &--light-grey { background-color: $grey-lightest; }
+  &--dark-grey { background-color: $grey-dark; }
+  &--darker-grey { background-color: $grey-darker; }
+  &--darkest-grey { background-color: $grey-darkest; }
+
+  &--theme { background-color: $theme-primary; }
+  &--theme-primary { background-color: $theme-primary; }
+  &--theme-secondary { background-color: $theme-secondary; }
+}
+
+.section {
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  background-attachment: fixed;
+  .touch & { background-attachment: scroll; }
+}
+
+
+
+
+// -- Page intro sections --
+.intro {
+  position: relative;
+  overflow: hidden;
+  background-color: $white;
+
+  &.has-nav &__content {
+    margin-bottom: 50px;
+    background-color: $theme-primary;
+    color: $white;
+    & .title { color: $white; }
+  }
+
+
+  $pagenav-height: 50px;
+  &__nav {
+    height: $pagenav-height;
+    line-height: $pagenav-height;
+    background-color: rgba($theme-secondary,0.85);
+    border-top: 0;
+    border-bottom: 0;
+    color: #fff;
+    position: absolute;
+    bottom: 0; left: 0; width: 100%;
+    ul {
+      height: $pagenav-height;
+      li {
+        margin-left: 0;
+        padding-top: 0;
+        border-left: .5px solid rgba($white,0.1);
+        border-color: rgba($white,0.1) !important;
+
+        &.is-current {
+          color: $white;
+          background-color: rgba($theme-secondary,0.85);
+        }
+        &:hover {
+          background-color: rgba($theme-secondary,0.85);
+        }
+      }
+    }
+
+    &.stuck {
+      position: fixed; top: 0; bottom: auto;
+      z-index: $z-nav-upper;
+      box-shadow: 0 0 5px 0 rgba($black, 0.2);
+    }
+  }
+
+}
+
+
+
+
+
+.photo {
+  @include transition();
+  margin-bottom: $s2;
+  box-shadow: 0 0 10px 2px $black;
+  border-radius: 3px; overflow: hidden;
+  transform: scale(1);
+  &__img {
+    margin-bottom: 0;
+  }
+  &__text {
+    margin-top: 0;
+    background-color: $grey-darker;
+    padding: $s1 $s2;
+  }
+
+  &:hover {
+    transform: scale(1.02);
+  }
+}
+
+
+
+.workshop {
+  margin-bottom: $s2;
+}

@@ -1,0 +1,68 @@
+---
+layout: standard
+id: irista
+title: Irista
+nav-order: 6
+
+
+
+intro: >
+  <p class="text--lg">Ein Urlaub ist zu wertvoll, um Ihn zu vergessen. Mit Canon Irista bleibt Ihr Sonnenaufgang immer greifbar.</p>
+
+
+
+sections:
+
+  - title: Title 1
+    content: >
+      <p class="text--lg">Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Etiam porta sem malesuada magna mollis euismod. Sed posuere consectetur est at lobortis.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Vestibulum id ligula porta felis euismod semper. Sed posuere consectetur est at lobortis.</p>
+
+  - title: Title 2
+    content: >
+      <p class="text--lg">Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Etiam porta sem malesuada magna mollis euismod. Sed posuere consectetur est at lobortis.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Vestibulum id ligula porta felis euismod semper. Sed posuere consectetur est at lobortis.</p>
+
+  - title: Title 3
+    content: >
+      <p class="text--lg">Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Etiam porta sem malesuada magna mollis euismod. Sed posuere consectetur est at lobortis.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Vestibulum id ligula porta felis euismod semper. Sed posuere consectetur est at lobortis.</p>
+
+  - title: Title 4
+    content: >
+      <p class="text--lg">Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Etiam porta sem malesuada magna mollis euismod. Sed posuere consectetur est at lobortis.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Vestibulum id ligula porta felis euismod semper. Sed posuere consectetur est at lobortis.</p>
+
+---
+
+
+
+
+<section class="section">
+  <div class="row row--padding">
+  {% for section in page.sections %}
+
+    <div class="bob" id="section-{{section.title | slugify}}">
+
+      <div class="bob__image bg-img bg-img--4-3 bg-img--rounded" style="background-image:url({{site.baseurl}}/img/content/{{page.id}}/{{section.title | slugify}}.jpg);"></div>
+
+      <div class="bob__text">
+        <h3 class="title title--md">{{section.title}}</h3>
+        <p class="text--lg">{{section.content | truncate: 220 | strip_html}}</p>
+      </div>
+
+    </div>
+
+  {% endfor %}
+  </div>
+</section>
+
+
+
+<section class="vpad--xl bg--theme-primary text--white text--center">
+  <div class="row row--padding">
+    <h2 class="title title--lg title--upper title--display">Irista</h2>
+    <p class="text--lg">Nulla vitae elit libero, a pharetra augue. Nulla vitae elit libero, a pharetra augue.</p>
+    <a href="#" class="btn btn--white">Find out more</a>
+  </div>
+</section>

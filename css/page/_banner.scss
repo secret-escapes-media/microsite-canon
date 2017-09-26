@@ -1,0 +1,86 @@
+// the title banner that appears at the top of every page. sometimes animated bgs
+
+$info-height: 70px;
+$core-nav-height:     $s8;
+$core-nav-height-sm:  $s7;
+$site-nav-height:     $s8;
+$site-nav-height-sm:  $s7;
+
+.banner {
+  position: relative;
+  height: 75%;
+  color: white;
+  background-color: $grey-darkest;
+  text-align: center;
+  & * { color: white; }
+
+
+
+  &__content {
+    position: absolute;
+    top: $core-nav-height;
+    bottom: $site-nav-height;
+    left: 0;
+    right: 0;
+    z-index: $z-content-overlay;
+    background-color: rgba($black,.15);
+    &-wrap {
+      text-shadow: 3px 3px 0 rgba(12,13,14,0.2), 0px 0px 10px rgba(12,13,14,0.35);
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: $z-content;
+      padding-top: 25vh;
+      padding-left: $s4;
+      padding-right: $s4;
+      .csstransforms.csstransforms3d & {
+        top: 50%;
+        padding-top: 0;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: $z-content;
+    background-color: rgba($grey-darker,0.2);
+    pointer-events: none;
+  }
+
+
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: $z-content;
+    background-color: $grey-dark;
+    background-image: url('../img/bg/bg.jpg');
+    @include background-attributes;
+  }
+
+
+  /* ==================================
+  // MICROSITE NAV */
+
+  &__nav {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: $z-content-overlay;
+    background-color: rgba($grey-dark,0.85);
+  }
+
+
+}

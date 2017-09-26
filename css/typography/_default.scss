@@ -1,0 +1,15 @@
+
+$font-family:             'Open Sans', 'Helvetica Neue', sans-serif;
+$font-family-headline: 'Montserrat', 'Helvetica Neue', sans-serif;
+$font-family-display: 'Oswald', 'Helvetica Neue', sans-serif;
+
+html { font-size: 92.5%; } // = 14px – This is the root size for REM
+
+body {
+  font-family: $font-family;
+  font-weight: 400;
+  line-height: 1.65;
+  letter-spacing: .005em;
+  -webkit-text-size-adjust: 100%;
+  color: $text;
+}
