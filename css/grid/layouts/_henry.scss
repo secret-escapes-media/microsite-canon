@@ -1,0 +1,92 @@
+// Henry is Harvey's twin brother, but totally disreguards image aspect ratio.
+// The feature image will always strech to 100% of the height before stacking
+// for mobile
+
+.henry {
+  &__image {
+    background-color: $grey-light;
+    @include background-attributes();
+    &:before {
+      content: "";
+      display: block;
+      width: 100%;
+      padding-top: 66.666666667%; // 3-2 ratio
+    }
+  }
+  &__text { padding: $s4 $s2 $s8; }
+  @include bp(xl){
+    display: table;
+    width: 100%;
+    height: 100%;
+    &__text {
+      display: table-cell;
+      width: 50%;
+      max-width: $xl;
+      padding-top: 10%;
+      padding-left: $s4;
+      padding-right: $s4;
+      padding-bottom: 10%;
+    }
+    &__image {
+      display: table-cell;
+      width: 50%;
+      height: 100%;
+      &:before { display: none; }
+    }
+    &--swap > &__text  { float: left; }
+    &--swap > &__image { float: right; }
+  }
+
+
+  // &__text {
+  //   padding: $s2 $s2 $s5;
+  //   text-align: center;
+  // }
+  // // &__image {
+  // //   position: relative;
+  // //   width: 100%;
+  // //   background-color: $grey-light;
+  // //   @include background-attributes;
+  // //   &:before {
+  // //     display: block;
+  // //     content: "";
+  // //     width: 100%;
+  // //   }
+  // //   &-link {
+  // //     position: absolute;
+  // //     top: 0;
+  // //     left: 0;
+  // //     right: 0;
+  // //     bottom: 0;
+  // //     z-index: $z-content;
+  // //   }
+  // }
+  // @include bp(xl){
+  //   .flexbox & {
+  //     display: flex;
+  //     align-items: center;
+  //   }
+  //   &__image {
+  //     @include span(6);
+  //     min-height: 460px;
+  //   }
+  //   &__text {
+  //     @include span(6 last);
+  //     max-width: 600px;
+  //     padding: $s3;
+  //     margin-left: auto;
+  //     margin-right: auto;
+  //   }
+  //   // &:nth-child(odd) {
+  //   //   & .henry__image { @include span(6 last); }
+  //   //   & .henry__text { @include span(6); }
+  //   //   .flexbox & {
+  //   //     display: flex;
+  //   //     align-items: center;
+  //   //     flex-direction: row-reverse;
+  //   //   }
+  //   // }
+  // }
+}
+
+

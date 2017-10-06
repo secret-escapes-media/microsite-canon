@@ -3,16 +3,12 @@ layout: default
 ---
 <div class="page__content">
 
-
-
-  {% include page/intro.html %}
-
-
+  <section class="vpad--xxl bg--grey-dark">
+    <div class="row row--xl row--padding text--white text--center text--lg">
+      {{ page.intro }}
+    </div>
+  </section>
 
   {{content}}
 
-
-
 </div><!-- END .page__content -->
-
-

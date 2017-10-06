@@ -70,6 +70,16 @@ hr {
   &--black  { background-color: $grey-darkest; }
 }
 
+.hrule {
+  display: inline-block;
+  width: 100%;
+  max-width: $s9;
+  height: 3px;
+  margin-top: $s2;
+  margin-bottom: $s2;
+  background-color: $c-red;
+  & + * { padding-top: 0; }
+}
 
 
 // ==================================================================

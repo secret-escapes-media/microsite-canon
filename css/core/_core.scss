@@ -56,8 +56,8 @@ $transition-time: .25s;
   background-size: cover;
 }
 
-// remove deafult link style
-a { color: inherit; text-decoration:none; }
+// remove deafult link style & keep cursor if no href
+a { color: inherit; text-decoration:none; cursor: pointer; }
 
 // generic center element
 .center { margin-left: auto; margin-right: auto; }

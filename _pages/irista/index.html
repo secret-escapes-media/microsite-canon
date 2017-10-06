@@ -3,11 +3,12 @@ layout: standard
 id: irista
 title: Irista
 nav-order: 6
+overview-order: 2
 
 
 
 intro: >
-  <p class="text--lg">Ein Urlaub ist zu wertvoll, um Ihn zu vergessen. Mit Canon Irista bleibt Ihr Sonnenaufgang immer greifbar.</p>
+  Ein Urlaub ist zu wertvoll, um Ihn zu vergessen. Mit Canon Irista bleibt Ihr Sonnenaufgang immer greifbar.
 
 
 
@@ -36,8 +37,6 @@ sections:
 ---
 
 
-
-
 <section class="section">
   <div class="row row--padding">
   {% for section in page.sections %}
@@ -57,12 +56,4 @@ sections:
   </div>
 </section>
 
-
-
-<section class="vpad--xl bg--theme-primary text--white text--center">
-  <div class="row row--padding">
-    <h2 class="title title--lg title--upper title--display">Irista</h2>
-    <p class="text--lg">Nulla vitae elit libero, a pharetra augue. Nulla vitae elit libero, a pharetra augue.</p>
-    <a href="#" class="btn btn--white">Find out more</a>
-  </div>
-</section>
+{% include components/irista-promo.html %}

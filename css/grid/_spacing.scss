@@ -44,12 +44,12 @@ $page-margin: $s4;
 .row {
   position: relative;
   @include container($xxxl);
-  &--100 { @include container(100%);}
-  &--xxl { @include container($xxl);}
-  &--xl  { @include container($xl);}
-  &--lg  { @include container($lg);}
-  &--md  { @include container($md);}
-  &--sm  { @include container($sm);}
+  &--100 { max-width: 100%; }
+  &--xxl { max-width: $xxl; }
+  &--xl  { max-width: $xl; }
+  &--lg  { max-width: $lg; }
+  &--md  { max-width: $md; }
+  &--sm  { max-width: $sm; }
   &--padding {
     padding-left: $s2;
     padding-right: $s2;

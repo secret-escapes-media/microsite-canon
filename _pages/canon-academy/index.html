@@ -3,21 +3,10 @@ layout: standard
 id: canon-academy
 title: Canon Academy
 nav-order: 5
-
-
+overview-order: 4
 
 intro: >
-  <p class="text--lg">Die Canon Academy bereitet Sie ausführlich auf Ihre Urlaubsfotografie vor: mit ihren Live-Workshops, Events und Expertentipps zu den Themen, die Sie begeistern. Entdecken Sie neue Wege in der Fotografie und lassen Sie sich von der Erfahrung und dem Wissen unserer Trainer zu neuen Geschichten inspirieren.</p>
-
-
-
-sections:
-  - title: video
-  - title: gallery
-  - title: academy
-  - title: workshop
-
-
+  Die Canon Academy bereitet Sie ausführlich auf Ihre Urlaubsfotografie vor: mit ihren Live-Workshops, Events und Expertentipps zu den Themen, die Sie begeistern. Entdecken Sie neue Wege in der Fotografie und lassen Sie sich von der Erfahrung und dem Wissen unserer Trainer zu neuen Geschichten inspirieren.
 
 workshop-topics:
 
@@ -32,33 +21,45 @@ workshop-topics:
 
   - title: Workshop title
     content: Sed posuere consectetur est at lobortis. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-
 ---
 
-
-
-<section id="section-video" class="vpad--xl text--center" style="background-image: url({{site.baseurl}}/img/content/{{page.id}}/video-bg.jpg);">
-  <div class="row row--padding row--lg">
-    <img src="{{site.baseurl}}/img/content/{{page.id}}/video.png" alt="Watch">
-  </div>
-</section>
-
-
-
-<section id="section-gallery" class="vpad--xl bg--darkest-grey text--white text--center">
-
+<section id="section-gallery" class="vpad--xxl text--center">
   <div class="row row--padding">
     <h2 class="title title--lg title--upper title--display">Photo Gallery</h2>
     <p class="text--lg">Nulla vitae elit libero, a pharetra augue. Nulla vitae elit libero, a pharetra augue.</p>
   </div>
+  <div class="vpad-top--lg row--padding">
+    <div class="row row--4-4-4-gutters">
+      {% assign modals = site.data.modals | where: 'id', 'academy-gallery' %}
+      {% for modal in modals %}
+        {% for modal in modal.contents %}
+          <div class="col vpad-bottom--lg ">
+            <a class="js-open-modal" data-open-modal="{{modal.id}}"><div class="bg-img bg-img--1-1" style="background-image: url('{{site.baseurl}}/img/modal/{{modal.image}}');"></div></a>
+            <div class="boxpad--sm bg--grey-light">
+              <span class="text--bolder">{{modal.title}}</span> &nbsp;<span class="text--sm">by {{modal.author}}</span>
+            </div>
+          </div>
+        {% endfor %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
 
-  <div class="row row--padding row--4-4-4-gutters">
-    {% assign photos = site.data.photos %}
-    {% for photo in photos %}
-    <div class="col photo">
-      <div class="photo__img bg-img bg-img--4-3" style="background-image: url({{site.baseurl}}/img/photos/{{photo.id}}.jpg);"></div>
-      <div class="photo__text">
-        <span class="text--bolder">{{photo.title}}</span> by {{photo.photographer}}
+<section id="section-workshop" class="vpad-top--xxl vpad-bottom--xl bg--workshops text--white">
+  <div class="row row--padding row--xl text--center">
+    <h2 class="title title--xl title--upper title--display">Workshops</h2>
+    <p class="text--lg">Sed posuere consectetur est at lobortis. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  </div>
+  <div class="row row--padding row--6-6-gutters">
+    {% for workshop in page.workshop-topics %}
+    <div class="col workshop text--center">
+      <div class="bg-img bg-img--16-9" style="background-image: url({{site.baseurl}}/img/content/{{page.id}}/{{workshop.title | slugify}}.jpg);"></div>
+      <div class="row--padding">
+        <div class="space--md"></div>
+        <h4 class="title title--xs">{{workshop.title}}</h4>
+        <p>{{workshop.content}}</p>
+        <a href="#" class="btn btn--sm btn--white-outline">Find out more</a>
+        <div class="space--lg"></div>
       </div>
     </div>
     {% endfor %}
@@ -66,41 +67,12 @@ workshop-topics:
 
 </section>
 
-
-
-<section id="section-academy" class="vpad--xl bg--theme-primary text--white text--center">
+<section class="vpad--xl bg--c-grey-dark text--white text--center">
   <div class="row row--padding">
-    <h2 class="title title--lg title--upper title--display">The Canon Academy</h2>
-    <p class="text--lg">Nulla vitae elit libero, a pharetra augue. Nulla vitae elit libero, a pharetra augue.</p>
-    <a href="#" class="btn btn--white">Find out more</a>
+    <h2 class="title title--md title--upper title--display">workshop calendar</h2>
+    <p class="text--lg">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa sequi in quos obcaecati. Sed eaque sunt iusto, asperiores nihil, non ipsam eveniet debitis quae magni maxime ab autem nesciunt, unde.</p>
+    <a href="#" class="btn btn--white-outline">Find out more</a>
   </div>
 </section>
 
-
-
-<section id="section-workshop" class="vpad--xl bg--theme-secondary text--white">
-
-  <div class="row row--padding row--xxl text--center">
-    <h2 class="title title--lg title--upper title--display">Workshops</h2>
-    <p class="text--lg">Sed posuere consectetur est at lobortis. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-  </div>
-
-  <div class="row row--padding row--6-6-gutters row--xxl">
-
-    {% for workshop in page.workshop-topics %}
-    <div class="col workshop">
-      <div class="bg-img bg-img--16-9" style="background-image: url({{site.baseurl}}/img/content/{{page.id}}/{{workshop.title | slugify}}.jpg);"></div>
-      <h4 class="title title--xs">{{workshop.title}}</h4>
-      <p>{{workshop.content}}</p>
-      <a href="#" class="btn btn--sm btn--white">Find out more</a>
-    </div>
-    {% endfor %}
-
-  </div>
-
-  <div class="row row--padding text--center">
-    <a href="#" class="btn btn--white">Find out more</a>
-  </div>
-
-</section>
-
+{% include components/irista-promo.html %}
