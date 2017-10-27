@@ -28,14 +28,14 @@ img {
   vertical-align: bottom;
 }
 
-// sharpens resized pngs - stops fuzzy logos mainly
-img[src$=".png"] {
-  image-rendering: -moz-crisp-edges;         /* Firefox */
-  image-rendering:   -o-crisp-edges;         /* Opera */
-  image-rendering: -webkit-optimize-contrast;/* Webkit (non-standard naming) */
-  image-rendering: crisp-edges;
-  -ms-interpolation-mode: nearest-neighbor;  /* IE (non-standard property) */
-}
+// // sharpens resized pngs - stops fuzzy logos mainly
+// img[src$=".png"] {
+//   image-rendering: -moz-crisp-edges;         /* Firefox */
+//   image-rendering:   -o-crisp-edges;         /* Opera */
+//   image-rendering: -webkit-optimize-contrast;/* Webkit (non-standard naming) */
+//   image-rendering: crisp-edges;
+//   -ms-interpolation-mode: nearest-neighbor;  /* IE (non-standard property) */
+// }
 
 // controls size image once swapped with svg
 .js-svg-swap { max-width: 100%; width: 100%; }

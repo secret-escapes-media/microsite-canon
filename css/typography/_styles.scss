@@ -47,9 +47,8 @@
   em                   { font-style: italic; font-weight: 400; }
   strong               { font-weight: 700; }
   a[href]:not([class]) {
-    color: $orange;
-    @include transition;
-    &:hover { color: $orange-darker; }
+    color: $c-red;
+    &:hover { text-decoration: underline; }
   }
 }
 

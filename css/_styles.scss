@@ -21,6 +21,20 @@
     @include background-attributes;
   }
 }
+
+.img-block {
+  text-align: center;
+  padding-top: $s3;
+  padding-bottom: $s3;
+  > * {
+    display: inline-block;
+    width: 150px;
+    margin: $s0 $s1;
+    vertical-align: middle;
+  }
+}
+
+
 //
 // .section {
 //   background-repeat: no-repeat;

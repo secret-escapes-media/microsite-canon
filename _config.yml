@@ -2,9 +2,9 @@
 title: Canon
 client:
   name: Canon
-  link: https://www.canon.co.uk/
+  link: https://www.canon.de/
 description: >
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  Im Urlaub erleben wir die Zeit anders als im Alltag. Mit allen Sinnen gewinnen wir neue Eindrücke und genießen die Begegnungen mit Mensch und Natur. Damit Ihr Urlaubsgefühl nicht in Vergessenheit gerät, unterstützt Sie Canon dabei, Ihre Geschichten in ausdruckstarken Bildern festzuhalten. Es erwarten Sie hier spannende Tipps & Tricks der Canon Academy Experten. Als besonderes Geschenk dürfen Sie sich einen 100GB Gutschein für die Canon irista Fotocloud mitnehmen.  
 baseurl: "/canon" # the subpath of your site, e.g. /blog/
 url: "http://mp.secretescapes.com" # the base hostname & protocol for your site
 

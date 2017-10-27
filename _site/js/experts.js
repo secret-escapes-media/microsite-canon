@@ -1,1 +1,0 @@
-!function(e,t,i){e(function(){"use strict";e(".js-interview-questions").hide(),e(".js-interview-toggle").on("click",function(t){t.preventDefault();var i=e(this).closest(".js-interview");e(".js-interview-questions",i).stop().slideToggle(600),"Read Interview"===e(this).text()?e(this).text("Hide Interview"):e(this).text("Read Interview")})})}(jQuery);

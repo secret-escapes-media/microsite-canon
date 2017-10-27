@@ -19,59 +19,8 @@
 #
 #####################################
 
-
-#################################################
-#   academy-gallery
-#################################################
-
-- id: academy-gallery
-  type: series
+- id: irista-video
+  type: youtube
   pages:
-    - id: canon-academy
-
-  contents:
-
-    - id: '01'
-      image: img.jpg
-      title: Photo Title 01
-      author: Firstname Lastname
-
-    - id: '02'
-      image: img.jpg
-      title: Photo Title 02
-      author: Firstname Lastname
-
-    - id: '03'
-      image: img.jpg
-      title: Photo Title 03
-      author: Firstname Lastname
-
-    - id: '04'
-      image: img.jpg
-      title: Photo Title 04
-      author: Firstname Lastname
-
-    - id: '05'
-      image: img.jpg
-      title: Photo Title 05
-      author: Firstname Lastname
-
-    - id: '06'
-      image: img.jpg
-      title: Photo Title 06
-      author: Firstname Lastname
-
-    - id: '07'
-      image: img.jpg
-      title: Photo Title 07
-      author: Firstname Lastname
-
-    - id: '08'
-      image: img.jpg
-      title: Photo Title 08
-      author: Firstname Lastname
-
-    - id: '09'
-      image: img.jpg
-      title: Photo Title 09
-      author: Firstname Lastname
+    - id: irista
+  youtube-id: QPlPhqSzfvE

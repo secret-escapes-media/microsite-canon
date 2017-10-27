@@ -5,61 +5,68 @@ title: Canon Academy
 nav-order: 5
 overview-order: 4
 
+banner:
+  title: Canon Academy
+  title-sub: Get ready for your story
+
 intro: >
-  Die Canon Academy bereitet Sie ausführlich auf Ihre Urlaubsfotografie vor: mit ihren Live-Workshops, Events und Expertentipps zu den Themen, die Sie begeistern. Entdecken Sie neue Wege in der Fotografie und lassen Sie sich von der Erfahrung und dem Wissen unserer Trainer zu neuen Geschichten inspirieren.
+  <p><strong>Unsere Story:</strong> Es gibt unzählige Möglichkeiten eine Geschichte zu erzählen. Aber was macht Ihre Geschichte besonders? Die Canon Academy hilft Ihnen, Ihren eigenen Stil zu entwickeln: durch Live-Workshops, individuelles Coaching sowie zahlreiche Canon Events und Fotoreisen. Professionelle Canon Academy Trainer vermitteln Ihnen Wissen, Methoden und eine Fülle an Werkzeugen. Vom Anfänger bis zum Profilevel.</p>
+  <p><strong>Denn die nächste Geschichte wartet schon auf Sie…</strong></p>
+
+overview-intro: >
+  Wir holen Sie dort ab, wo Sie mit Ihrer Fotografie stehen: Grundlagen-Workshops die Ihnen helfen, das Potenzial Ihrer Kamera besser zu nutzen, bis hin zu Spezial-Fotoworkshops an außergewöhnlichen Orten, sowie kostenlosen Leitfäden mit Expertentipps. Lernen Sie uns kennen.
 
 workshop-topics:
 
-  - title: Workshop title
-    content: Sed posuere consectetur est at lobortis. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+  - title: Grundlagen der Fotografie
+    id: grundlagen-der-fotografie
+    content: Raus aus der Vollautomatik. Nach einem Grundlagenkurs beherrschen Sie das kleine Einmaleins der Fotografie – Belichtung, Fokussierung, Bildausschnitt.
+    link: https://www.canon-academy.de/de/themen/1/grundlagen-der-fotografie
 
-  - title: Workshop title
-    content: Sed posuere consectetur est at lobortis. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+  - title: Natur-, Tier- und Makrofotografie
+    id: natur-tier-und-makrofotografie
+    content: Erleben Sie gemeinsam mit unseren Trainern die faszinierende Schönheit der Natur oder bereiten Sie sich auf spektakuläre Begegnungen in der Wildlife-Fotografie vor.
+    link: https://www.canon-academy.de/de/themen/17/natur-tier-und-makrofotografie
 
-  - title: Workshop title
-    content: Sed posuere consectetur est at lobortis. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+  - title: Portraitfotografie
+    id: portraitfotografie
+    content: Entdecken Sie, wie natürliches Tageslicht oder hartes Frontlicht die Stimmung beeinflussen. Jeder Mensch hat eine Geschichte. Erzählen Sie sie mit Ihren Portraitfotos.
+    link: https://www.canon-academy.de/de/themen/3/portrait
 
-  - title: Workshop title
-    content: Sed posuere consectetur est at lobortis. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+  - title: Architekturfotografie
+    id: architekturfotografie
+    content: Lernen Sie, wie Sie den Charme faszinierender Sehenswürdigkeiten festhalten und wie Sie die architektonischen Unterschiede in verschiedenen Kulturen zur Geltung bringen.
+    link: https://www.canon-academy.de/de/themen/15/architektur
 ---
-
-<section id="section-gallery" class="vpad--xxl text--center">
-  <div class="row row--padding">
-    <h2 class="title title--lg title--upper title--display">Photo Gallery</h2>
-    <p class="text--lg">Nulla vitae elit libero, a pharetra augue. Nulla vitae elit libero, a pharetra augue.</p>
-  </div>
-  <div class="vpad-top--lg row--padding">
-    <div class="row row--4-4-4-gutters">
-      {% assign modals = site.data.modals | where: 'id', 'academy-gallery' %}
-      {% for modal in modals %}
-        {% for modal in modal.contents %}
-          <div class="col vpad-bottom--lg ">
-            <a class="js-open-modal" data-open-modal="{{modal.id}}"><div class="bg-img bg-img--1-1" style="background-image: url('{{site.baseurl}}/img/modal/{{modal.image}}');"></div></a>
-            <div class="boxpad--sm bg--grey-light">
-              <span class="text--bolder">{{modal.title}}</span> &nbsp;<span class="text--sm">by {{modal.author}}</span>
-            </div>
-          </div>
-        {% endfor %}
-      {% endfor %}
-    </div>
-  </div>
-</section>
 
 <section id="section-workshop" class="vpad-top--xxl vpad-bottom--xl bg--workshops text--white">
   <div class="row row--padding row--xl text--center">
-    <h2 class="title title--xl title--upper title--display">Workshops</h2>
-    <p class="text--lg">Sed posuere consectetur est at lobortis. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <h2 class="title title--xl title--upper title--display">Unsere Foto-Workshops</h2>
+    <p class="text--lg">Entdecken Sie die Fotoworkshop-Angebote der Canon Academy zu vielfältigen fotografischen Themen.</p>
   </div>
   <div class="row row--padding row--6-6-gutters">
-    {% for workshop in page.workshop-topics %}
+    {% for workshop in page.workshop-topics limit:2 %}
     <div class="col workshop text--center">
-      <div class="bg-img bg-img--16-9" style="background-image: url({{site.baseurl}}/img/content/{{page.id}}/{{workshop.title | slugify}}.jpg);"></div>
+      <div class="bg-img bg-img--3-2" style="background-image: url({{site.baseurl}}/img/content/{{page.id}}/{{workshop.id}}.jpg);"></div>
       <div class="row--padding">
         <div class="space--md"></div>
         <h4 class="title title--xs">{{workshop.title}}</h4>
         <p>{{workshop.content}}</p>
-        <a href="#" class="btn btn--sm btn--white-outline">Find out more</a>
-        <div class="space--lg"></div>
+        <a href="{{workshop.link}}" class="btn btn--sm btn--white-outline">Jetzt mehr erfahren</a>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  <div class="row row--padding row--6-6-gutters">
+    {% assign other-workshops = page.workshop-topics | reverse %}
+    {% for workshop in other-workshops limit:2 %}
+    <div class="col workshop text--center">
+      <div class="bg-img bg-img--3-2" style="background-image: url({{site.baseurl}}/img/content/{{page.id}}/{{workshop.id}}.jpg);"></div>
+      <div class="row--padding">
+        <div class="space--md"></div>
+        <h4 class="title title--xs">{{workshop.title}}</h4>
+        <p>{{workshop.content}}</p>
+        <a href="{{workshop.link}}" class="btn btn--sm btn--white-outline">Jetzt mehr erfahren</a>
       </div>
     </div>
     {% endfor %}
@@ -67,12 +74,13 @@ workshop-topics:
 
 </section>
 
-<section class="vpad--xl bg--c-grey-dark text--white text--center">
+<!-- pretty sure that this isn't needed anymore -->
+<!-- <section class="vpad--xl bg--c-grey-dark text--white text--center">
   <div class="row row--padding">
-    <h2 class="title title--md title--upper title--display">workshop calendar</h2>
+    <h2 class="title title--md title--upper title--display">Workshop Calendar</h2>
     <p class="text--lg">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa sequi in quos obcaecati. Sed eaque sunt iusto, asperiores nihil, non ipsam eveniet debitis quae magni maxime ab autem nesciunt, unde.</p>
     <a href="#" class="btn btn--white-outline">Find out more</a>
   </div>
-</section>
+</section> -->
 
-{% include components/irista-promo.html %}
+{% include components/irista-banner.html %}

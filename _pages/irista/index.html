@@ -1,53 +1,64 @@
 ---
 layout: standard
 id: irista
-title: Irista
+title: Canon irista
 nav-order: 6
 overview-order: 2
 
+banner:
+  title: Canon Irista
+  title-sub: Deine Abenteuer stets im Blick
 
 
 intro: >
-  Ein Urlaub ist zu wertvoll, um Ihn zu vergessen. Mit Canon Irista bleibt Ihr Sonnenaufgang immer greifbar.
+  <p>Mit der Canon irista Fotocloud verlieren Sie nie wieder ein Erlebnis aus den Augen. Mit vielen Features unterstützen wir Ihre Bilder & Video Verwaltung. Lassen Sie Canon irista für sich arbeiten und nutzen Sie die Zeit für das Wesentliche - Ihre Abenteuer.</p>
+  <p><a href="https://www.irista.com/">Jetzt Canon irista testen und mit dem Gutscheincode XYZGHG 100GB geschenkt bekommen.</a></p>
+
+overview-intro: >
+  Bewahren Sie die einzigartigen Erinnerungen an Ihre Reisen. Mit der Canon irista Fotocloud haben Sie Ihre Bilder immer und in voller Qualität mit dabei. Gleichzeitig können Sie viel Zeit sparen, indem Sie Ihre Bilder mit Canon irista verwalten lassen.
 
 
 
 sections:
 
-  - title: Title 1
+  - title: Immer dabei
+    id: immer-dabei
     content: >
-      <p class="text--lg">Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Etiam porta sem malesuada magna mollis euismod. Sed posuere consectetur est at lobortis.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Vestibulum id ligula porta felis euismod semper. Sed posuere consectetur est at lobortis.</p>
+      <p>Mit <a href="https://www.irista.com/">Canon irista</a> haben Sie überall und zuverlässig Zugriff auf Ihre Erinnerungen: Von zu Hause aus loggen Sie sich ganz einfach über den Web-Browser mit Ihrer Canon IS ein. Und unterwegs haben Sie mit Ihrem Mobilgerät und der <a href="https://www.irista.com/">Canon irista</a> App Zugriff auf Ihre Bilder, um diese zu zeigen oder mit anderen zu teilen.</p>
 
-  - title: Title 2
+  - title: Einfach den Überblick bewahren
+    id: einfach-den-uberblick-bewahren
     content: >
-      <p class="text--lg">Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Etiam porta sem malesuada magna mollis euismod. Sed posuere consectetur est at lobortis.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Vestibulum id ligula porta felis euismod semper. Sed posuere consectetur est at lobortis.</p>
+      <p>Navigieren Sie im Handumdrehen durch Ihre Erinnerungen und verwalten Sie Bilder mühelos in Online-Alben. Mit <a href="https://www.irista.com/">Canon irista</a> teilen Sie Ihre Bilder nur dann, wenn Sie es wollen – zum Beispiel mit Freunden oder mit Ihrer Familie. Praktisch: Bilder lassen sich auf Wunsch nach Schlagwörtern sortieren. So finden Sie immer schnell, wonach Sie suchen.</p>
 
-  - title: Title 3
+  - title: Erstklassig präsentieren
+    id: erstklassig-prasentieren
     content: >
-      <p class="text--lg">Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Etiam porta sem malesuada magna mollis euismod. Sed posuere consectetur est at lobortis.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Vestibulum id ligula porta felis euismod semper. Sed posuere consectetur est at lobortis.</p>
-
-  - title: Title 4
-    content: >
-      <p class="text--lg">Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Etiam porta sem malesuada magna mollis euismod. Sed posuere consectetur est at lobortis.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Vestibulum id ligula porta felis euismod semper. Sed posuere consectetur est at lobortis.</p>
+      <p>Das exklusive Canon hdbook Fotobuch können Sie direkt in <a href="https://www.irista.com/">Canon irista</a> online gestalten. So verleihen Sie Ihren Erinnerungen einen besonders hochwertigen Auftritt. Wählen Sie aus verschiedenen Formaten und ergänzen Sie Ihr Fotobuch mit individuellen Texten. So schaffen Sie eine bleibende Erinnerung zum Anfassen, Blättern und Verschenken.</p>
 
 ---
+
+<section id="section-video" class="vpad--xl text--center" style="background-image: url({{site.baseurl}}/img/content/{{page.id}}/video-bg.jpg);">
+  <div class="row row--padding row--lg">
+    <a id="tracking-play-video" class="js-open-modal" data-open-modal="irista-video">
+      <img src="{{site.baseurl}}/img/content/{{page.id}}/video.png">
+    </a>
+  </div>
+</section>
 
 
 <section class="section">
   <div class="row row--padding">
   {% for section in page.sections %}
 
-    <div class="bob" id="section-{{section.title | slugify}}">
+    <div class="bob{% cycle '', ' bob--swap' %}" id="section-{{section.title | slugify}}">
 
-      <div class="bob__image bg-img bg-img--4-3 bg-img--rounded" style="background-image:url({{site.baseurl}}/img/content/{{page.id}}/{{section.title | slugify}}.jpg);"></div>
+      <div class="bob__image bg-img bg-img--4-3 bg-img--rounded" style="background-image:url({{site.baseurl}}/img/content/{{page.id}}/{{section.id}}.jpg);"></div>
 
       <div class="bob__text">
         <h3 class="title title--md">{{section.title}}</h3>
-        <p class="text--lg">{{section.content | truncate: 220 | strip_html}}</p>
+        {{section.content}}
+        <a href="https://www.irista.com/" class="btn btn--red-outline">Canon irista entdecken</a>
       </div>
 
     </div>
@@ -56,4 +67,4 @@ sections:
   </div>
 </section>
 
-{% include components/irista-promo.html %}
+{% include components/irista-banner.html %}

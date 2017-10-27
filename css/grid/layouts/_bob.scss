@@ -27,9 +27,13 @@
       @include span(5 last);
       padding-top: 0;
     }
-    &:nth-child(odd){
+    &--6-6 &__image { @include span(6); }
+    &--6-6 &__text  { @include span(6 last); }
+    &--swap{
       .bob__image { @include span(7 last); }
       .bob__text { @include span(5); }
+      &--6-6 &__image { @include span(6 last); }
+      &--6-6 &__text  { @include span(6); }
       .flexbox & {
         display: flex;
         align-items: center;
