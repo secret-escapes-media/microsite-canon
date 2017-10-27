@@ -5,10 +5,10 @@ layout: default
 
   <section class="vpad--xxl bg--grey-dark">
     <div class="row row--xl row--padding text--white text--center text--lg">
-      {{ page.intro }}
+      {{page.intro | liquify}}
       <div>
         <div class="space--sm"></div>
-        <a href="https://www.canon-academy.de/uploads/downloads/016603f8-df7a-d349-2139-fae9683e629e.pdf" class="btn btn--red" target="_blank">Direkt zum Leitfaden</a>
+        <a href="{{page.link}}" class="btn btn--red" target="_blank">Direkt zum Leitfaden</a>
       </div>
     </div>
   </section>
@@ -25,7 +25,7 @@ layout: default
               {{section.content}}
             </div>
             <div class="space--sm"></div>
-            <a href="https://www.canon-academy.de/uploads/downloads/016603f8-df7a-d349-2139-fae9683e629e.pdf" class="btn btn--sm btn--red-outline" target="_blank">Zum Leitfaden</a>
+            <a href="{{page.link}}" class="btn btn--sm btn--red-outline" target="_blank">Zum Leitfaden</a>
           </div>
         </div>
       </div>

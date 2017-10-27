@@ -5,15 +5,15 @@ layout: default
 
   <section class="vpad--xxl bg--grey-dark">
     <div class="row row--xl row--padding text--white text--center text--lg">
-      {{ page.intro }}
+      {{ page.intro | liquify }}
       {% case page.id %}
         {% when "irista" %}
         <div class="img-block">
-          <a id="track-irista-logo" href="https://www.irista.com/"><img width="300" src="{{site.baseurl}}/img/logo/canon-irista-white.png" alt="Canon Irista logo"></a>
+          <a id="track-irista-logo" href="https://goo.gl/ekFLVe"><img width="300" src="{{site.baseurl}}/img/logo/canon-irista-white.png" alt="Canon Irista logo"></a>
         </div>
         {% when 'canon-academy' %}
         <div class="img-block">
-          <a id="track-academy-logo" href="https://www.canon-academy.de/de"><img width="300" src="{{site.baseurl}}/img/logo/canon-academy.png" alt="Canon Academy logo"></a>
+          <a id="track-academy-logo" href="https://goo.gl/mRY1Af"><img width="300" src="{{site.baseurl}}/img/logo/canon-academy.png" alt="Canon Academy logo"></a>
         </div>
       {% endcase %}
     </div>

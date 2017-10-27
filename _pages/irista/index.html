@@ -4,6 +4,7 @@ id: irista
 title: Canon irista
 nav-order: 6
 overview-order: 2
+link: https://goo.gl/ekFLVe
 
 
 banner:
@@ -12,7 +13,7 @@ banner:
 
 intro: >
   <p>Mit der Canon irista Fotocloud verlieren Sie nie wieder ein Erlebnis aus den Augen. Mit vielen Features unterstützen wir Ihre Bilder & Video Verwaltung. Lassen Sie Canon irista für sich arbeiten und nutzen Sie die Zeit für das Wesentliche - Ihre Abenteuer.</p>
-  <p><a href="https://www.irista.com/">Jetzt Canon irista testen und mit dem Gutscheincode XYZGHG 100GB geschenkt bekommen.</a></p>
+  <p><a href="{{page.link}}">Jetzt Canon irista testen und mit dem Gutscheincode XYZGHG 100GB geschenkt bekommen.</a></p>
 
 overview-intro: >
   Bewahren Sie die einzigartigen Erinnerungen an Ihre Reisen. Mit der Canon irista Fotocloud haben Sie Ihre Bilder immer und in voller Qualität mit dabei. Gleichzeitig können Sie viel Zeit sparen, indem Sie Ihre Bilder mit Canon irista verwalten lassen.
@@ -23,17 +24,17 @@ sections:
   - title: Immer dabei
     id: immer-dabei
     content: >
-      <p>Mit <a href="https://www.irista.com/">Canon irista</a> haben Sie überall und zuverlässig Zugriff auf Ihre Erinnerungen: Von zu Hause aus loggen Sie sich ganz einfach über den Web-Browser mit Ihrer Canon IS ein. Und unterwegs haben Sie mit Ihrem Mobilgerät und der <a href="https://www.irista.com/">Canon irista</a> App Zugriff auf Ihre Bilder, um diese zu zeigen oder mit anderen zu teilen.</p>
+      <p>Mit <a href="{{page.link}}">Canon irista</a> haben Sie überall und zuverlässig Zugriff auf Ihre Erinnerungen: Von zu Hause aus loggen Sie sich ganz einfach über den Web-Browser mit Ihrer Canon IS ein. Und unterwegs haben Sie mit Ihrem Mobilgerät und der <a href="{{page.link}}">Canon irista</a> App Zugriff auf Ihre Bilder, um diese zu zeigen oder mit anderen zu teilen.</p>
 
   - title: Einfach den Überblick bewahren
     id: einfach-den-uberblick-bewahren
     content: >
-      <p>Navigieren Sie im Handumdrehen durch Ihre Erinnerungen und verwalten Sie Bilder mühelos in Online-Alben. Mit <a href="https://www.irista.com/">Canon irista</a> teilen Sie Ihre Bilder nur dann, wenn Sie es wollen – zum Beispiel mit Freunden oder mit Ihrer Familie. Praktisch: Bilder lassen sich auf Wunsch nach Schlagwörtern sortieren. So finden Sie immer schnell, wonach Sie suchen.</p>
+      <p>Navigieren Sie im Handumdrehen durch Ihre Erinnerungen und verwalten Sie Bilder mühelos in Online-Alben. Mit <a href="{{page.link}}">Canon irista</a> teilen Sie Ihre Bilder nur dann, wenn Sie es wollen – zum Beispiel mit Freunden oder mit Ihrer Familie. Praktisch: Bilder lassen sich auf Wunsch nach Schlagwörtern sortieren. So finden Sie immer schnell, wonach Sie suchen.</p>
 
   - title: Erstklassig präsentieren
     id: erstklassig-prasentieren
     content: >
-      <p>Das exklusive Canon hdbook Fotobuch können Sie direkt in <a href="https://www.irista.com/">Canon irista</a> online gestalten. So verleihen Sie Ihren Erinnerungen einen besonders hochwertigen Auftritt. Wählen Sie aus verschiedenen Formaten und ergänzen Sie Ihr Fotobuch mit individuellen Texten. So schaffen Sie eine bleibende Erinnerung zum Anfassen, Blättern und Verschenken.</p>
+      <p>Das exklusive Canon hdbook Fotobuch können Sie direkt in <a href="{{page.link}}">Canon irista</a> online gestalten. So verleihen Sie Ihren Erinnerungen einen besonders hochwertigen Auftritt. Wählen Sie aus verschiedenen Formaten und ergänzen Sie Ihr Fotobuch mit individuellen Texten. So schaffen Sie eine bleibende Erinnerung zum Anfassen, Blättern und Verschenken.</p>
 ---
 
 
@@ -52,8 +53,8 @@ sections:
       <div class="bob__image bg-img bg-img--4-3 bg-img--rounded" style="background-image:url({{site.baseurl}}/img/content/{{page.id}}/{{section.id}}.jpg);"></div>
       <div class="bob__text">
         <h3 class="title title--md">{{section.title}}</h3>
-        {{section.content}}
-        <a href="https://www.irista.com/" class="btn btn--red-outline">Canon irista entdecken</a>
+        {{section.content | liquify}}
+        <a href="{{page.link}}" class="btn btn--red-outline">Canon irista entdecken</a>
       </div>
     </div>
   {% endfor %}
