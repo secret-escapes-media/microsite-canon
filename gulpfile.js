@@ -38,8 +38,7 @@ gulp.task('js', function(){
       // plugins
       './js/_lib/modernizr-custom.js',
       './node_modules/jquery/dist/jquery.min.js',
-      './node_modules/jquery-countdown/dist/jquery.countdown.min.js',
-      './node_modules/fittext.js/jquery.fittext.js',
+      // './node_modules/jquery-countdown/dist/jquery.countdown.min.js',
 
       // custom js - with on doc ready wrapper
       './js/_components/on-ready/start.js',
@@ -47,8 +46,8 @@ gulp.task('js', function(){
         // components
         './js/_components/standard.js',
         './js/_components/modal.js',
-        './js/_components/modal-nav.js',
-        './js/_components/offer-countdown.js',
+        // './js/_components/modal-nav.js',
+        // './js/_components/offer-countdown.js',
         './js/_components/irista-banner.js',
 
         // custom js for project

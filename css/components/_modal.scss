@@ -11,8 +11,25 @@
   &.is-closed { display: none; }
   &--standard { max-width: $xl; }
   &--series   { max-width: $xxl; }
-  &--youtube  { max-width: $xxxl; }
   &--image    { max-width: $xxl; }
+  &--youtube  {
+    max-width: $xxxl;
+    .csstransforms.csstransforms3d & {
+      // centers youtube video
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      padding-left: $s2;
+      padding-right: $s2;
+      width: 100%;
+      transform: translateY(-50%);
+      @include bp(lg){
+        padding-left: $s6;
+        padding-right: $s6;
+      };
+    }
+  }
   &__bg {
     position: fixed;
     top: 0;
@@ -84,6 +101,7 @@
     }
     &:hover{ background-color: $black; }
   }
+  &__video { position: relative; }
 }
 
 .disable-scroll { overflow: hidden; }
@@ -102,11 +120,4 @@
     width: 100%;
     height: 100%;
   }
-  // // this centering is an absolute bugger. want to get rid of the wrap
-  // .csstransforms.csstransforms3d &__wrap {
-  //   position: absolute;
-  //   top: 50%;
-  //   width: 100%;
-  //   transform: translateY(-50%);
-  // }
 }

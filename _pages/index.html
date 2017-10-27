@@ -12,20 +12,21 @@ intro: >
   <p>Im Urlaub erleben wir die Zeit anders als im Alltag. Mit allen Sinnen gewinnen wir neue Eindrücke und genießen die Begegnungen mit Mensch und Natur.</p>
   <p>Damit Ihr Urlaubsgefühl nicht in Vergessenheit gerät, unterstützt Sie Canon dabei, Ihre Geschichten in ausdruckstarken Bildern festzuhalten. </p>
   <p>Es erwarten Sie hier spannende Tipps & Tricks der Canon Academy Experten. Als besonderes Geschenk dürfen Sie sich einen 100GB Gutschein für die Canon irista Fotocloud mitnehmen.</p>
-
 ---
+
+
 <div class="page__content">
 
   <div class="section bg--grey-light text--center">
     <div class="row row--padding">
       {{page.intro}}
       <div class="img-block">
-        <a href="{{site.baseurl}}/irista"><img width="300" src="{{site.baseurl}}/img/logo/canon-irista-black.png" alt="Canon Irista logo"></a><a href="{{site.baseurl}}/canon-academy"><img width="300" src="{{site.baseurl}}/img/logo/canon-academy.png" alt="Canon Academy logo"></a>
+        <a id="track-irista-logo" href="{{site.baseurl}}/irista"><img width="300" src="{{site.baseurl}}/img/logo/canon-irista-black.png" alt="Canon Irista logo"></a><a id="track-academy-logo" href="{{site.baseurl}}/canon-academy"><img width="300" src="{{site.baseurl}}/img/logo/canon-academy.png" alt="Canon Academy logo"></a>
       </div>
     </div>
   </div>
 
-  <div class="section bg--white">
+  <div class="section bg--white vpad--xxl">
   {% assign pages = site.html_pages | sort:"overview-order" %}
   {% for page in pages %}
     {% unless page.id == "overview" %}

@@ -61,3 +61,12 @@ a { color: inherit; text-decoration:none; cursor: pointer; }
 
 // generic center element
 .center { margin-left: auto; margin-right: auto; }
+
+// clearfix for non susy floats
+@mixin clearfix() {
+  &:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+}

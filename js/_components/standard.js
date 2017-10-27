@@ -60,7 +60,7 @@ $('[class*=nav__item--' + currentPage + ']').addClass('is-current');
 
 
 ///////////////////////////////////////
-//       In page nav
+//      Sticky microsite nav
 ///////////////////////////////////////
 
 function stickNav(){

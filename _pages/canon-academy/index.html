@@ -5,6 +5,7 @@ title: Canon Academy
 nav-order: 5
 overview-order: 4
 
+
 banner:
   title: Canon Academy
   title-sub: Get ready for your story
@@ -15,6 +16,7 @@ intro: >
 
 overview-intro: >
   Wir holen Sie dort ab, wo Sie mit Ihrer Fotografie stehen: Grundlagen-Workshops die Ihnen helfen, das Potenzial Ihrer Kamera besser zu nutzen, bis hin zu Spezial-Fotoworkshops an außergewöhnlichen Orten, sowie kostenlosen Leitfäden mit Expertentipps. Lernen Sie uns kennen.
+
 
 workshop-topics:
 
@@ -37,7 +39,19 @@ workshop-topics:
     id: architekturfotografie
     content: Lernen Sie, wie Sie den Charme faszinierender Sehenswürdigkeiten festhalten und wie Sie die architektonischen Unterschiede in verschiedenen Kulturen zur Geltung bringen.
     link: https://www.canon-academy.de/de/themen/15/architektur
+
+workshop-html: >
+  <div class="col workshop text--center">
+    <div class="bg-img bg-img--3-2" style="background-image: url({{site.baseurl}}/img/content/{{page.id}}/{{workshop.id}}.jpg);"></div>
+    <div class="row--padding">
+      <div class="space--md"></div>
+      <h4 class="title title--xs">{{workshop.title}}</h4>
+      <p>{{workshop.content}}</p>
+      <a href="{{workshop.link}}" class="btn btn--sm btn--white-outline">Jetzt mehr erfahren</a>
+    </div>
+  </div>
 ---
+
 
 <section id="section-workshop" class="vpad-top--xxl vpad-bottom--xl bg--workshops text--white">
   <div class="row row--padding row--xl text--center">
@@ -46,41 +60,16 @@ workshop-topics:
   </div>
   <div class="row row--padding row--6-6-gutters">
     {% for workshop in page.workshop-topics limit:2 %}
-    <div class="col workshop text--center">
-      <div class="bg-img bg-img--3-2" style="background-image: url({{site.baseurl}}/img/content/{{page.id}}/{{workshop.id}}.jpg);"></div>
-      <div class="row--padding">
-        <div class="space--md"></div>
-        <h4 class="title title--xs">{{workshop.title}}</h4>
-        <p>{{workshop.content}}</p>
-        <a href="{{workshop.link}}" class="btn btn--sm btn--white-outline">Jetzt mehr erfahren</a>
-      </div>
-    </div>
+      {{page.workshop-html | liquify}}
     {% endfor %}
   </div>
   <div class="row row--padding row--6-6-gutters">
     {% assign other-workshops = page.workshop-topics | reverse %}
     {% for workshop in other-workshops limit:2 %}
-    <div class="col workshop text--center">
-      <div class="bg-img bg-img--3-2" style="background-image: url({{site.baseurl}}/img/content/{{page.id}}/{{workshop.id}}.jpg);"></div>
-      <div class="row--padding">
-        <div class="space--md"></div>
-        <h4 class="title title--xs">{{workshop.title}}</h4>
-        <p>{{workshop.content}}</p>
-        <a href="{{workshop.link}}" class="btn btn--sm btn--white-outline">Jetzt mehr erfahren</a>
-      </div>
-    </div>
+      {{page.workshop-html | liquify}}
     {% endfor %}
   </div>
 
 </section>
-
-<!-- pretty sure that this isn't needed anymore -->
-<!-- <section class="vpad--xl bg--c-grey-dark text--white text--center">
-  <div class="row row--padding">
-    <h2 class="title title--md title--upper title--display">Workshop Calendar</h2>
-    <p class="text--lg">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa sequi in quos obcaecati. Sed eaque sunt iusto, asperiores nihil, non ipsam eveniet debitis quae magni maxime ab autem nesciunt, unde.</p>
-    <a href="#" class="btn btn--white-outline">Find out more</a>
-  </div>
-</section> -->
 
 {% include components/irista-banner.html %}

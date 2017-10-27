@@ -17,29 +17,29 @@
     padding: $s1 $s4;
     font-size: $s-2;
   }
-  &--orange { background-color: $orange;
-    &:hover { background-color: $orange-dark; }
-  }
-  &--orange-outline {
-    color: $text;
-    background-color: $white;
-    &:before {
-      // creates a border within the button dimentions. useful if an outline
-      // button is inline with a solid colour button
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      border: 1px solid $orange;
-      border-radius: inherit;
-    }
-    &:hover {
-      color: $text-white;
-      background-color: $orange;
-    }
-  }
+  // &--orange { background-color: $orange;
+  //   &:hover { background-color: $orange-dark; }
+  // }
+  // &--orange-outline {
+  //   color: $text;
+  //   background-color: $white;
+  //   &:before {
+  //     // creates a border within the button dimentions. useful if an outline
+  //     // button is inline with a solid colour button
+  //     content: '';
+  //     position: absolute;
+  //     top: 0;
+  //     left: 0;
+  //     right: 0;
+  //     bottom: 0;
+  //     border: 1px solid $orange;
+  //     border-radius: inherit;
+  //   }
+  //   &:hover {
+  //     color: $text-white;
+  //     background-color: $orange;
+  //   }
+  // }
   &--red { background-color: $c-red;
     &:hover { background-color: $c-red-dark; }
   }

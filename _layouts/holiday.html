@@ -18,13 +18,15 @@ layout: default
       <div class="henry{% cycle '', ' henry--swap' %}" id="section-{{section.title | slugify}}">
         <div class="henry__image" style="background-image:url({{site.baseurl}}/img/content/{{page.id}}/{{section.id}}.jpg);"></div>
         <div class="henry__text">
-          <h3 class="title title--md">{{section.title}}</h3>
-          <hr class="hrule">
-          <div>
-            {{section.content}}
+          <div class="row row--lg">
+            <h3 class="title title--md">{{section.title}}</h3>
+            <hr class="hrule">
+            <div>
+              {{section.content}}
+            </div>
+            <div class="space--sm"></div>
+            <a href="https://www.canon-academy.de/uploads/downloads/016603f8-df7a-d349-2139-fae9683e629e.pdf" class="btn btn--sm btn--red-outline" target="_blank">Zum Leitfaden</a>
           </div>
-          <div class="space--sm"></div>
-          <a href="https://www.canon-academy.de/uploads/downloads/016603f8-df7a-d349-2139-fae9683e629e.pdf" class="btn btn--sm btn--red-outline" target="_blank">Zum Leitfaden</a>
         </div>
       </div>
     {% endfor %}

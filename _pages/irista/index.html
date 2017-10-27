@@ -5,10 +5,10 @@ title: Canon irista
 nav-order: 6
 overview-order: 2
 
+
 banner:
   title: Canon Irista
   title-sub: Deine Abenteuer stets im Blick
-
 
 intro: >
   <p>Mit der Canon irista Fotocloud verlieren Sie nie wieder ein Erlebnis aus den Augen. Mit vielen Features unterstützen wir Ihre Bilder & Video Verwaltung. Lassen Sie Canon irista für sich arbeiten und nutzen Sie die Zeit für das Wesentliche - Ihre Abenteuer.</p>
@@ -16,7 +16,6 @@ intro: >
 
 overview-intro: >
   Bewahren Sie die einzigartigen Erinnerungen an Ihre Reisen. Mit der Canon irista Fotocloud haben Sie Ihre Bilder immer und in voller Qualität mit dabei. Gleichzeitig können Sie viel Zeit sparen, indem Sie Ihre Bilder mit Canon irista verwalten lassen.
-
 
 
 sections:
@@ -35,34 +34,28 @@ sections:
     id: erstklassig-prasentieren
     content: >
       <p>Das exklusive Canon hdbook Fotobuch können Sie direkt in <a href="https://www.irista.com/">Canon irista</a> online gestalten. So verleihen Sie Ihren Erinnerungen einen besonders hochwertigen Auftritt. Wählen Sie aus verschiedenen Formaten und ergänzen Sie Ihr Fotobuch mit individuellen Texten. So schaffen Sie eine bleibende Erinnerung zum Anfassen, Blättern und Verschenken.</p>
-
 ---
 
-<section id="section-video" class="vpad--xl text--center" style="background-image: url({{site.baseurl}}/img/content/{{page.id}}/video-bg.jpg);">
+
+<section id="section-video" class="vpad--xl text--center bg--video">
   <div class="row row--padding row--lg">
-    <a id="tracking-play-video" class="js-open-modal" data-open-modal="irista-video">
+    <a id="track-play-video" class="js-open-modal" data-open-modal="irista-video">
       <img src="{{site.baseurl}}/img/content/{{page.id}}/video.png">
     </a>
   </div>
 </section>
 
-
-<section class="section">
+<section class="section vpad--xxl">
   <div class="row row--padding">
   {% for section in page.sections %}
-
-    <div class="bob{% cycle '', ' bob--swap' %}" id="section-{{section.title | slugify}}">
-
+    <div class="row bob{% cycle '', ' bob--swap' %}" id="section-{{section.title | slugify}}">
       <div class="bob__image bg-img bg-img--4-3 bg-img--rounded" style="background-image:url({{site.baseurl}}/img/content/{{page.id}}/{{section.id}}.jpg);"></div>
-
       <div class="bob__text">
         <h3 class="title title--md">{{section.title}}</h3>
         {{section.content}}
         <a href="https://www.irista.com/" class="btn btn--red-outline">Canon irista entdecken</a>
       </div>
-
     </div>
-
   {% endfor %}
   </div>
 </section>

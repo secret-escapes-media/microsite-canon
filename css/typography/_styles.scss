@@ -1,9 +1,11 @@
 // general typographic elements like paragraphs, lists, etc
 
 .text {
-  &--xxl      { font-size: $s3; }
-  &--xl       { font-size: $s2; }
-  &--lg       { font-size: $s1; }
+  @include bp(md){
+    &--xxl      { font-size: $s3; }
+    &--xl       { font-size: $s2; }
+    &--lg       { font-size: $s1; }
+  }
   &--sm       { font-size: $s-1; font-weight: 400; }
   &--lighter  { font-weight: 100; }
   &--light    { font-weight: 200; }

@@ -4,20 +4,14 @@
   &--white         { background-color: $white; }
   &--grey-light    { background-color: $grey-lightest; }
   &--grey-dark     { background-color: $grey-dark; }
-  &--grey-darker   { background-color: $grey-darker; }
-  &--grey-darkest  { background-color: $grey-darkest; }
-  &--c-red         { background-color: $c-red; }
-  &--c-grey-dark   { background-color: $c-grey-dark ; }
   &--workshops {
     background-image: url('../img/bg/workshops.jpg');
     background-position: center top;
     background-repeat: no-repeat;
     background-color: #121b20;
   }
-
-  &--irista {
-    background-color: #954546;
-    background-image: url('../img/bg/irista.jpg');
+  &--video {
+    background-image: url('../img/content/irista/video-bg.jpg');
     @include background-attributes;
   }
 }
@@ -25,7 +19,6 @@
 .img-block {
   text-align: center;
   padding-top: $s3;
-  padding-bottom: $s3;
   > * {
     display: inline-block;
     width: 150px;
@@ -33,44 +26,6 @@
     vertical-align: middle;
   }
 }
-
-
-//
-// .section {
-//   background-repeat: no-repeat;
-//   background-position: top center;
-//   background-size: cover;
-//   background-attachment: fixed;
-//   .touch & { background-attachment: scroll; }
-// }
-
-
-
-// .photo {
-//   @include transition();
-//   margin-bottom: $s2;
-//   box-shadow: 0 0 10px 2px $black;
-//   border-radius: 3px; overflow: hidden;
-//   transform: scale(1);
-//   &__img {
-//     margin-bottom: 0;
-//   }
-//   &__text {
-//     margin-top: 0;
-//     background-color: $grey-darker;
-//     padding: $s1 $s2;
-//   }
-//
-//   &:hover {
-//     transform: scale(1.02);
-//   }
-// }
-
-//
-//
-// .workshop {
-//   margin-bottom: $s2;
-// }
 
 .is-stuck {
   position: fixed;

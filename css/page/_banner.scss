@@ -8,14 +8,15 @@ $site-nav-height-sm:  $s7;
 
 .banner {
   position: relative;
-  height: 75%;
+  height: 550px;
   color: white;
-  background-color: $grey-darkest;
+  background-color: $grey-dark;
   text-align: center;
+  overflow: hidden;
+  @include vbp(734px){
+    height: 75%;
+  }
   & * { color: white; }
-
-
-
   &__content {
     position: absolute;
     top: $core-nav-height;
@@ -23,15 +24,14 @@ $site-nav-height-sm:  $s7;
     left: 0;
     right: 0;
     z-index: $z-content-overlay;
-    background-color: rgba($black,.15);
     &-wrap {
       text-shadow: 3px 3px 0 rgba(12,13,14,0.2), 0px 0px 10px rgba(12,13,14,0.35);
       position: absolute;
       top: 0;
       left: 0;
       right: 0;
-      z-index: $z-content;
-      padding-top: 25vh;
+      z-index: $z-content-overlay;
+      padding-top: 20vh;
       padding-left: $s4;
       padding-right: $s4;
       .csstransforms.csstransforms3d & {
@@ -50,7 +50,7 @@ $site-nav-height-sm:  $s7;
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: $z-content;
+    z-index: $z-content-upper;
     background-color: rgba($grey-darker,0.2);
     pointer-events: none;
   }
@@ -64,8 +64,6 @@ $site-nav-height-sm:  $s7;
     right: 0;
     bottom: 0;
     z-index: $z-content;
-    background-color: $grey-dark;
-    background-image: url('../img/bg/bg.jpg');
     @include background-attributes;
   }
 
